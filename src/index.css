@@ -1,0 +1,43 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.rings i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: clockwise 4s linear infinite;
+}
+
+.rings i:nth-child(2) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: clockwise 6s linear infinite;
+}
+
+.rings i:nth-child(3) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: antiClockWise 10s linear infinite;
+}
+
+.rings:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antiClockWise {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
